@@ -1,0 +1,8 @@
+1. Top interview questions on javascripts.com
+
+https://www.codementor.io/@nihantanu/21-essential-javascript-tech-interview-practice-questions-answers-du107p62z
+
+
+2.  Understanding functions in javascript 
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
