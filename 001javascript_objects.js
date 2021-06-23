@@ -17,3 +17,35 @@ console.log(obj['name']);
 console.log(obj['id']);
 
 console.log('Object in javascript is similar to Map in javascript');
+
+
+console.log('Creating object with functions');
+
+var obj = function() {
+    prop1 = 'first object',
+    prop2 = 'second object'
+}
+
+console.log(obj)
+
+console.log('Creating object with calling function')
+function objectCreate() {
+    var obj = {}; 
+    obj.prop1 = 'first object'
+    obj.prop2 = 'second object'
+    return obj;
+}
+
+console.log(objectCreate())
+
+
+console.log('Creating object with new keyword and function');
+
+function Objectcreate() { 
+    
+    this.prop1 = 'first object'
+    this.prop2 = 'second object'
+
+}
+
+console.log(new Objectcreate())
