@@ -49,3 +49,22 @@ function Objectcreate() {
 }
 
 console.log(new Objectcreate())
+
+console.log('Key points:')
+console.log('There are four way to create object in javascript:')
+
+var obj = function () {};
+obj(); // method 1
+obj.foo = function() {
+    console.log("Hellow");
+}
+
+obj.foo(); // method 2
+
+function foo() { 
+    obj.p = '1',
+    obj.p2 = 'hey'
+}
+
+var object = new foo(); // method 3
+console.log(object)
