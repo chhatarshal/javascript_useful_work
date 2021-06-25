@@ -23,3 +23,20 @@ console.log(
 console.log(bycycle)
 console.log('Lets call inflate tyre again and see what it print as this')
 bycycle.inflate_tyre()
+
+
+function Mechanic(name) {
+    this.name = name;
+}
+
+var mike = new Mechanic('Mike')
+mike.inflate_tyren =  bycycle.inflate_tyre;
+mike.inflate_tyren();
+mike.inflate_tyren();
+mike.inflate_tyren();
+console.log(mike)
+console.log(bycycle)
+
+mike.inflate_tyren.call(bycycle) // 4th way of calling a object
+// in above line we are binding object 
+console.log(bycycle)
