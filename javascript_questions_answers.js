@@ -153,3 +153,41 @@ console.log("A" - "B" == NaN) // false
 console.log(NaN + 2) // NaN
 console.log(NaN + "2") // NaN2
 console.log(+"2")
+
+
+//The following recursive code will cause a stack overflow if the array list is too large. 
+//How can you fix this and still retain the recursive pattern?
+
+//Question:
+var list = ['a','b','c','d','e','f','g','h'];//readHugeList();
+
+var nextListItem = function() {
+    var item = list.pop();
+
+    if (item) {
+        // process the list item...
+        nextListItem();
+    }
+};
+
+//answer
+var list = ['a','b','c','d','e','f','g','h'];
+
+var nextListItem = function() {
+    var item = list.pop();
+
+    if (item) {
+        // process the list item...
+        setTimeout(nextListItem(), 0);
+    }
+};
+
+
+console.log(`The stack overflow is eliminated because the event loop handles the recursion, 
+not the call stack. When nextListItem runs, if item is not null, 
+the timeout function (nextListItem) is pushed to the event queue and the function exits, 
+thereby leaving the call stack clear. When the event queue runs its timed-out event, 
+the next item is processed and a timer is set to again invoke nextListItem. Accordingly, 
+the method is processed from start to finish without a direct recursive call, 
+so the call stack remains clear, regardless of the number of iterations.`);
+
