@@ -137,3 +137,19 @@ var myArray = ['a', 'b', 'c', 'd'];
 myArray.push('end');
 myArray.unshift('start');
 console.log(myArray); // ["start", "a", "b", "c", "d", "end"]
+
+//What will the code below output to the console and why ?
+
+console.log(1 +  "2" + "2"); // The first operation to be performed in 1 + "2". Since one of the operands ("2") is a string, JavaScript assumes it needs to perform string concatenation and therefore converts the type of 1 to "1", 1 + "2" yields "12". Then, "12" + "2" yields "122".
+console.log(1 +  +"2" + "2"); // Based on order of operations, the first operation to be performed is +"2" (the extra + before the first "2" is treated as a unary operator). Thus, JavaScript converts the type of "2" to numeric and then applies the unary + sign to it (i.e., treats it as a positive number). As a result, the next operation is now 1 + 2 which of course yields 3. But then, we have an operation between a number and a string (i.e., 3 and "2"), so once again JavaScript converts the type of the numeric value to a string and performs string concatenation, yielding "32".
+console.log(1 +  -"1" + "2");
+console.log(+"1" +  "1" + "2");
+console.log( "A" - "B" + "2"); //Since the - operator can not be applied to strings, and since neither "A" nor "B" can be converted to numeric values, "A" - "B" yields NaN which is then concatenated with the string "2" to yield “NaN2”.
+console.log( "A" - "B" + 2); //As exlained in the previous example, "A" - "B" yields NaN. But any operator applied to NaN with any other numeric operand will still yield NaN.
+console.log('-------some -- experiment --');
+console.log(NaN == NaN)
+console.log("A" - "B");
+console.log("A" - "B" == NaN) // false
+console.log(NaN + 2) // NaN
+console.log(NaN + "2") // NaN2
+console.log(+"2")
