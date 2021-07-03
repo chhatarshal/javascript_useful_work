@@ -6,3 +6,6 @@ https://www.codementor.io/@nihantanu/21-essential-javascript-tech-interview-prac
 2.  Understanding functions in javascript 
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+
+
+https://huyenchip.com/ml-interviews-book/
