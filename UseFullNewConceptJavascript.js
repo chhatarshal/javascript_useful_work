@@ -50,5 +50,12 @@ const inventory = [
 
   ar('newvalue again');
 
-  
+  let array11 = [1, 2, 3]
+
+ let v1, v2, v3 = [array11]
+ console.log(v1)
+ console.log(v2)
+ console.log(v3)
+
+ 
 
