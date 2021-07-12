@@ -36,3 +36,19 @@ const inventory = [
   console.log(inventory.find(isCherries));
    inventory.find(printval);
   // { name: 'cherries', quantity: 5 }
+
+
+  console.log('simple function');
+
+  function myfun(val) {
+    console.log('my function called' + val);
+  }
+
+  myfun('newvalue');
+
+  var ar = (val) => console.log('hey I am arrow function');
+
+  ar('newvalue again');
+
+  
+
