@@ -9,3 +9,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
 
 
 https://huyenchip.com/ml-interviews-book/
+
+3. All things about javascript
+
+https://javascript.info/
