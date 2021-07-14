@@ -20,13 +20,14 @@ console.log(bar + false);
 console.log('what will be output of below code....')
 var z = 1, y = z = typeof y;
 console.log(y);  
+// undefined
 
 console.log('what will be output of below code....')
 // NFE (Named Function Expression 
 var foo = function bar() { return 12; };
 typeof foo();
 console.log(foo())  
-
+// function
 
 console.log('what will be output of below code....')
 function bar() { return 12; };
