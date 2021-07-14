@@ -191,3 +191,43 @@ the next item is processed and a timer is set to again invoke nextListItem. Acco
 the method is processed from start to finish without a direct recursive call, 
 so the call stack remains clear, regardless of the number of iterations.`);
 
+console.log('What will be output of below code???');
+
+var callbacks = [];
+console.log('inside..loop');
+for (var i = 0; i < 4; i++) {
+  callbacks.push(() => console.log(i));
+  console.log(i)
+}
+
+console.log('loop end...');
+console.log(callbacks);
+callbacks[0]();
+callbacks[1]();
+callbacks[2]();
+callbacks[3]();
+
+
+function func() {
+    // Start of TDZ for deadVariable
+    
+    // we can still do something here, just our deadVariable is not available yet
+    const exampleVariable = 5;
+    console.log(exampleVariable); // 5
+    
+    // End of TDZ for deadVariable
+    let deadVariable = 10;
+    
+    console.log(deadVariable);  // 10
+  }
+  
+  func();
+
+
+  function func1() {
+    return deadOrAlive;
+ }
+ 
+ let deadOrAlive = 'alive!'
+ 
+ console.log(func1());  // alive!
