@@ -1,3 +1,28 @@
+
+console.log(v);
+var v = 10;
+console.log(v);
+
+function fun() {
+  console.log('fun....');
+  console.log(funagain);
+  return funagain;
+  function funagain() {
+    console.log('fun ... new Funagain');
+  }  
+}
+
+fun()();
+
+
+var funName = function funSun() { 
+
+  console.log('-----named fun.-------');
+  funSun();
+}
+
+funName();
+
 const array1 = [1, 4, 9, 16];
 
 // pass a function to map
