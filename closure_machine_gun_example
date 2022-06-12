@@ -1,0 +1,41 @@
+var machineGun = () => {
+    let bullet = 100;
+    function reload() {
+        buttet = 100;
+    }
+    function fire() {
+        buttet = buttet - 1;
+        if (buttet > 0) { 
+          return buttet;
+        } else { 
+          return 'Please reload';
+        }
+    }
+    return {
+        reload,
+        fire
+    }
+}
+
+// Now Lets create object of this machine gun
+
+var mg = machineGun();
+mg.fire();
+
+
+// Now lets fire in loop
+
+for (var i =0 ; i < 98; i++) {
+    mg.fire()
+}
+
+mg.fire();
+mg.fire();
+
+// Now machine is empty need to reload
+// call reload method
+
+
+mg.reload()
+
+// Now again machine is ready to fire
